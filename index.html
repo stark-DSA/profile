@@ -1,20 +1,3 @@
-// File: README.md
-# Mukhtadir Shaikh — Static Portfolio (Plain HTML)
-
-This canvas now contains a single, self-contained static HTML file (`portfolio.html`) intended to be served as a plain static site. I removed the React/Next.js files to avoid any TypeScript/JSX parsing errors (for example: `SyntaxError: /index.tsx: Unexpected token`).
-
-## What I changed and why
-- **Removed** React/Next.js files and components that produced JSX/TSX parsing errors in sandboxed environments.
-- **Kept** a single, production-ready `portfolio.html` that contains all the resume content and is fully static — works in any browser or static host (GitHub Pages, Netlify, Vercel static, etc.).
-- This prevents the environment from trying to parse `.tsx`/JSX files and throwing syntax errors.
-
-## How to use
-1. Download or copy `portfolio.html` to your project root.
-2. Open it in a browser (`file://` or via a static server). Example quick server: `npx http-server .` or `python3 -m http.server`.
-
----
-
-// File: portfolio.html
 <!doctype html>
 <html lang="en">
 <head>
@@ -210,14 +193,6 @@ This canvas now contains a single, self-contained static HTML file (`portfolio.h
 </body>
 </html>
 
----
-
-// Notes for the user
-1. If you want this as `index.html` for a static server, simply rename `portfolio.html` to `index.html`.
-2. If you previously required a Next.js/React project, tell me and I will recreate a properly configured TypeScript/TSX project (with `tsconfig.json` and correct file extensions) — but for now I removed JSX/TSX to eliminate the syntax error in environments that don't have TS/JSX configured.
-
-
----
 
 // Quick question for you
 Do you want this kept as a simple static HTML file (recommended for portability), or should I recreate a full Next.js + TypeScript project with correctly named `.tsx` files and `tsconfig.json` so the sandbox can run it? Please tell me the expected behavior if you want the Next.js version.
